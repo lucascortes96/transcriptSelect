@@ -35,20 +35,6 @@ foreach my $gene (@{$genes}) {
             # Store the non-MANE Select transcript ID in the non_mane_transcripts hash
             push @{$non_mane_transcripts{$gene->stable_id}}, $transcript->stable_id;
         }
-        #my $mane_transcript = $transcript_adaptor->fetch_by_stable_id($transcript->stable_id());
-        #my $mane_gene_stable_id = $mane_transcript->get_Gene()->stable_id();
-        #print $mane_transcript->stable_id(), ", ", $mane_gene_stable_id, ",", $transcript->stable_id(), "\n";
-        #print $gene->stable_id(), "\n";
-        #print "Transcript Stable ID: ", $transcript->stable_id(), "\n";
-        #if ($mane_transcript && $mane_gene_stable_id eq $gene->stable_id()) {
-            #print "match!\n";
-            #my $start_diff = abs($transcript->seq_region_start() - $mane_transcript->seq_region_start());
-            #print $start_diff, "\n";
-            #my $end_diff = abs($transcript->seq_region_end() - $mane_transcript->seq_region_end());
-            #if ($start_diff > 10 || $end_diff > 10) {
-            #}
-                #print $gene->stable_id(), "\t", $transcript->stable_id(), "\t", $transcript->seq_region_name(), "\t", $transcript->seq_region_start(), "\t", $transcript->seq_region_end(), "\n";
-        #}
     }
 }
 
@@ -162,21 +148,4 @@ close $fh;
 close $start_diff_file;
 close $end_diff_file;
 
-# Now the common_genes hash contains the genes and their transcripts that are present in both hashes
-
-
-# Print the MANE Select transcripts
-#print "MANE Select Transcripts:\n";
-#print Dumper(\%mane_transcripts);
-
-# Print a newline for readability
-#print "\n";
-
-# Print the non-MANE Select transcripts
-#print "Non-MANE Select Transcripts:\n";
-#print Dumper(\%non_mane_transcripts);
-
-##Print the overlapping genes
-#print "OVERLAPPING GENES \n";
-#print Dumper(\%common_genes);
 
