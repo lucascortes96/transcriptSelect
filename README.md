@@ -8,7 +8,7 @@ Grabs transcripts from protein coding genes that are within 'n' base pairs of th
 ### Basic Usage
 
 ```
-perl parseOutput.py --diff_limit 10
+perl retrieve5prime.pl --diff_limit 10
 
 ```
 
