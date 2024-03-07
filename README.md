@@ -3,7 +3,21 @@ Will become part of a GENCODE project that works to pick transcripts that can be
 
 
 ## retrieve5prime.pl
-Grabs transcripts from protein coding genes that are within 'n' base pairs of the 5' TSS of the MANE select transcript. Specifically 'rankedUpstream.txt' provides the top genes that have the highest number of transcripts upstream of the 5' MANE TSS that fall within the 'n' base pair limit. 
+Grabs transcripts from protein coding genes that are within 'n' base pairs of the 5' TSS of the MANE select transcript. Specifically 'rankedUpstream.txt' provides the top genes that have the highest number of transcripts upstream of the 5' MANE TSS that fall within the 'n' base pair limit. Default 'n' is 10. 
 
-### parseOutput.py
+### Basic Usage
+
+```
+perl parseOutput.py --diff_limit 10
+
+```
+
+## parseOutput.py
 Simply grabs a couple of general stats from the retrieve5prime script. 
+
+### Basic Usage 
+
+```
+python3 parseOutput.py --number 10
+
+```
