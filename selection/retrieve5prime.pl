@@ -111,7 +111,7 @@ foreach my $gene_id (keys %common_genes) {
                     }
                 } 
                 elsif ($start_diff < 0) {
-                    if ($start_diff < $diff_limit) {
+                    if (abs($start_diff) < $diff_limit) {
                         $count_3_prime++;
                         print $start_diff_file "$gene_id\t" . $non_mane_transcript->stable_id() . "\t" . $non_mane_transcript->seq_region_name() . "\t" . $non_mane_transcript->seq_region_start() . "\t" . $non_mane_transcript->seq_region_end() . "\t" . $non_mane_transcript->external_name() . "\n";
                     }
@@ -121,7 +121,7 @@ foreach my $gene_id (keys %common_genes) {
                 $end_diff = $mane_transcript->seq_region_start() - $non_mane_transcript->seq_region_start();
                 # Count the number of transcripts that are 5' or 3' of the mane start site
                 if ($start_diff < 0) {
-                    if ($start_diff < $diff_limit) {
+                    if (abs($start_diff) < $diff_limit) {
                         $count_5_prime++;
                         $gene_transcript_counts{gene_id}++;
                         print $start_diff_file "$gene_id\t" . $non_mane_transcript->stable_id() . "\t" . $non_mane_transcript->seq_region_name() . "\t" . $non_mane_transcript->seq_region_start() . "\t" . $non_mane_transcript->seq_region_end() . "\t" . $non_mane_transcript->external_name() . "\n";
