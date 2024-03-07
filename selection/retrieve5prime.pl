@@ -1,6 +1,5 @@
 #Perl Imports 
 use Bio::EnsEMBL::Registry;
-use Bio::EnsEMBL::Registry;
 my $registry = 'Bio::EnsEMBL::Registry';
 use Data::Dumper;
 use Getopt::Long;
